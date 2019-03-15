@@ -38,6 +38,28 @@ namespace Bank
             {
                 throw new ArgumentOutOfRangeException("amount");
             }
+            if(amount < 0)
+            {
+                throw new ArgumentOutOfRangeException("amount");
+            }
+            m_balance += amount;
+        }
+
+        public void credit(double amount)
+        {
+            if(m_frozen)
+            {
+                throw new ArgumentOutOfRangeException("Amount frozen");
+            }
+            if(amount<0)
+            {
+                throw new ArgumentOutOfRangeException("amount");
+            }
+
+            m_balance += amount;
+        }
+        }
+
         }
     }
-}
+
