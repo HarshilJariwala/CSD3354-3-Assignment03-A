@@ -58,8 +58,26 @@ namespace Bank
 
             m_balance += amount;
         }
+
+
+        private void FreezeAccount()
+        {
+            m_frozen = true;
         }
 
+        private void UnfreezeAccount()
+        {
+            m_frozen = false;
+        }
+
+        public static void Main()
+        {
+            Class1 ba = new Class1("Mr. Bryan Walton", 11.99);
+
+            ba.credit(5.77);
+            ba.Debit(11.22);
+            Console.WriteLine("Current balance is ${0}",ba.balance);
         }
     }
+}
 
