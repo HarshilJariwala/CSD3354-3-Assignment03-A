@@ -11,6 +11,8 @@ namespace Bank
         private string m_customerName;
         private double m_balance;
         private bool m_frozen = false;
+        public const string DebitAmountExceedBalanceMessage = "Debit amount exceed balance";
+        public const string DebitAmountLessThanZeroMessage = "Debit amount is less than zero";
 
         public Class1()
         { }
